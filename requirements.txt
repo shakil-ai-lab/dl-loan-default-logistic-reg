@@ -2,3 +2,8 @@ numpy
 pandas
 matplotlib
 scikit-learn
+imbalanced-learn
+optuna
+joblib
+seaborn
+xgboost     
