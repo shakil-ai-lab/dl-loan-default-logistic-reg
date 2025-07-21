@@ -148,6 +148,16 @@ For questions or contributions, please open an issue or pull request.
 
 ---
 
+## 🙏 Request for Help & Collaboration
+
+> ⚠️ **Note:** The current model has a relatively low precision score. If you have suggestions to improve the model’s performance—especially precision—I would greatly appreciate your insights or contributions.  
+>
+> Feel free to open an issue or submit a pull request.  
+>  
+> Thank you in advance for your support! 🙌
+
+---
+
 ## 📄 License
 
-This project is licensed under the  MIT License.
+This project is licensed under the [MIT License](LICENSE).
