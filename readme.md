@@ -1,3 +1,5 @@
+![Loan Default Prediction Banner](assets/loan-default-app.jpeg)
+
 # 💰 Loan Default Prediction App
 
 A machine learning project for predicting loan default risk using advanced classification models and a user-friendly Streamlit web interface.
