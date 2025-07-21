@@ -20,6 +20,7 @@ features_config = joblib.load("src/features_config.pkl") # Load features configu
 categorical_cols = features_config['categorical_features']
 numerical_cols = features_config['numeric_features']
 ordinal_features = features_config['ordinal_feature']
+binary_features = features_config['binary_features']
 
 # st.title("Loan Default Prediction App")
 
@@ -39,7 +40,11 @@ for col in ordinal_features:
     options = df[col].unique().tolist()
     user_input[col] = st.selectbox(f"{col}", options)
 
-# convert input to DataFrame
+for col in binary_features: 
+    options = df[col].unique().tolist()
+    user_input[col] = st.selectbox(f"{col}", options)
+
+    # convert input to DataFrame
 input_df = pd.DataFrame([user_input])
 st.dataframe(input_df, hide_index=True)
 
@@ -47,6 +52,8 @@ st.dataframe(input_df, hide_index=True)
 if st.button("Predict Loan Default"):
        # Make prediction
     prediction = pipeline.predict(input_df)
+    prob = pipeline.predict_proba(input_df)[:, 1][0]  # Probability of default
+    # st.write(prediction)
     st.subheader("Result:")
     if prediction == 1:
         st.error(f"⚠️ Likely to Default with probability {prob:.2f}")
